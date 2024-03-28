@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1.py"
+    }
+  ],
+  "env": {
+    "SLACK_BOT_TOKEN": "@slack_bot_token",
+    "OPENAI_API_KEY": "@openai_api_key"
+  }
+}
