@@ -1,5 +1,8 @@
 {
-  "version": 2,
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key",
+    "SLACK_BOT_TOKEN": "@slack_bot_token"
+  },
   "builds": [
     {
       "src": "api/*.py",
@@ -11,9 +14,5 @@
       "src": "/api/(.*)",
       "dest": "/api/$1.py"
     }
-  ],
-  "env": {
-    "SLACK_BOT_TOKEN": "@slack_bot_token",
-    "OPENAI_API_KEY": "@openai_api_key"
-  }
+  ]
 }
