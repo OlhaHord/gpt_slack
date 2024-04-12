@@ -26,5 +26,5 @@ def handle_mention_events(body, say):
     response = ask_openai(text)
     say(response)
 
-if name == "__main__":
+if __name__ == "__main__":
     app.start(port=int(os.environ.get("PORT", 3000)))
