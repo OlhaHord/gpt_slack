@@ -1,2 +1,2 @@
-slack-bot
-openai
+slack-bolt==1.11.0
+openai==0.14.0
