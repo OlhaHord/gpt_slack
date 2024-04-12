@@ -26,9 +26,5 @@ def handle_mention_events(body, say):
     response = ask_openai(text)
     say(response)
 
-@app.route("/", methods=["GET", "POST"])
-def handle_request():
-    return "Hello World", 200
-
 if __name__ == "__main__":
     app.start(port=int(os.environ.get("PORT", 3000)))
